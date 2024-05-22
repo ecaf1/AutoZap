@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS messages(
   user_phone VARCHAR(20),
   message TEXT,
   receipt_date DATETIME,
+  processed INTEGER DEFAULT 0,
   FOREIGN KEY (user_phone) REFERENCES users(phone)
 );
 
